@@ -29,7 +29,7 @@ const DetailsPage = () => {
         </div>
       )}
       {!isLoading && (
-        <div className='bg-white p-10 mt-[50px] rounded-[15px] w-[800px] max-w-[800px]'>
+        <div className='bg-white p-10 my-[50px] rounded-[15px] w-[800px] max-w-[800px]'>
           <img src={recipeInfo.image} alt="pic" className='w-[700px] h-[300px] object-cover rounded-[15px] shadow-lg' />
           <h1 className='font-semibold text-[30px] mt-5 '>
             {recipeInfo.title}
