@@ -9,7 +9,7 @@ const HomePage = () => {
 
   useEffect(() => {
     getRecipes();
-  }, []);
+  },[]);
 
   const getRecipes = async () => {
     setIsLoading(true);
@@ -19,7 +19,10 @@ const HomePage = () => {
   }
 
   return (
-    <div className='my-10'>
+    <div className='my-10 text-center'>
+      <h1 className='text-[40px] font-bold mb-5'>
+        Recipe Master
+      </h1>
       <div className='w-full flex items-center justify-center'>
         {isLoading && (
           <div className='w-full flex items-center justify-center '>
@@ -35,7 +38,7 @@ const HomePage = () => {
                   <Link to={`/details/${recipe.id}`} className='mt-3 mb-5 text-[22px] line-clamp-1 font-semibold text-green-500 flex items-center gap-x-2'>
                     {recipe.title} <ExternalLink />
                   </Link>
-                  <div dangerouslySetInnerHTML={{ __html: recipe.summary }} className='' />
+                  <div dangerouslySetInnerHTML={{ __html: recipe.summary }} className='line-clamp-[9] text-start' />
                 </div>
               </div>
             ))}
